@@ -1,6 +1,6 @@
 class Tile < ApplicationRecord
   validates :picture, presence: true
   
-  has_attached_file :picture, styles: { medium: "640x" }
+  has_attached_file :picture, styles: { medium: "600x" }
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
 end

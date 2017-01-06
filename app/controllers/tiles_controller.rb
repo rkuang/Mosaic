@@ -15,7 +15,7 @@ class TilesController < ApplicationController
       flash[:success] = "Your Tile was created!"
       redirect_to tiles_path
     else
-      flash[:danger] = @tile.errors.full_messages.join(", ")
+      flash.now[:danger] = @tile.errors.full_messages.join(", ")
       render :new
     end
   end

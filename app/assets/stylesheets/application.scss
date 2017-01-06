@@ -43,6 +43,7 @@ body {
   .container {
     max-width: 1010px;
   }
+  margin-bottom: 0px;
 }
 
 .navbar-default .navbar-brand {
@@ -71,11 +72,12 @@ body {
 .tile-wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 642px;
+  max-width: 602px;
+  padding-top: 60px;
 }
 
 .tile {
-  max-width: 642px;
+  width: 100%;
   border: 1px solid #efefef;
   border-radius: 3px;
   margin-bottom: 60px;
