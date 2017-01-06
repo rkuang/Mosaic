@@ -55,8 +55,11 @@ body {
   margin-top: 18px;
 }
 
-// Tile Styles
+.navbar-toggle {
+  margin-top: 21px;
+}
 
+// Tile Styles
 .tile-wrapper {
   margin: 0 auto;
   width: 100%;
@@ -91,4 +94,12 @@ body {
 
 .tile-description {
   
+}
+
+// Form Styles
+.form-wrapper {
+  background-color: white;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  padding: 30px;
 }
