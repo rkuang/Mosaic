@@ -21,8 +21,16 @@
 
 // Body Styles
 body {
+  position: relative;
   background-color: #fafafa;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.alert {
+  margin-top: -5px;
+  position: absolute;
+  width: 60%;
+  margin-left: 20%;
 }
 
 // Navbar Styles

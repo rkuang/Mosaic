@@ -8,8 +8,14 @@ class TilesController < ApplicationController
   end
   
   def create
-    @tile = Tile.create(tile_params)
-    redirect_to tiles_path
+    @tile = Tile.new(tile_params)
+    if @tile.save
+      flash[:success] = "Your Tile was created!"
+      redirect_to tiles_path
+    else
+      flash[:danger] = @tile.errors.full_messages.join(", ")
+      render :new
+    end
   end
   
   private

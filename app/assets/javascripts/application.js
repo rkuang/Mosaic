@@ -15,3 +15,8 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+/* global $ */
+$(document).on('turbolinks:load', function(){
+  $('.alert').delay(750).fadeOut(2000);
+});
