@@ -19,6 +19,76 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-.navbar-brand {
+// Body Styles
+body {
+  background-color: #fafafa;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+// Navbar Styles
+.navbar {
+  height: 76px;
+  border: 0;
+  border-bottom: 1px solid #dbdbdb;
+  border-radius: 0;
+  background-color: white;
+  .container {
+    max-width: 1010px;
+  }
+}
+
+.navbar-default .navbar-brand {
   font-family: 'Leckerli One', cursive;
+  font-size: 2.25em;
+  margin-top: 8px;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+  color: #003569;
+  &:hover {
+    color: #003569;
+    opacity: 0.70;
+  }
+}
+
+.collapse, .navbar-collapse {
+  margin-top: 18px;
+}
+
+// Tile Styles
+
+.tile-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 642px;
+}
+
+.tile {
+  max-width: 642px;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  margin-bottom: 60px;
+}
+
+.tile-header, .tile-footer {
+  color: #262626;
+  background-color: white;
+  font-weight: 700;
+}
+
+.tile-header {
+  padding: 14px 20px;
+}
+
+.tile-picture {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+
+.tile-footer {
+  padding: 20px 24px;
+}
+
+.tile-description {
+  
 }
