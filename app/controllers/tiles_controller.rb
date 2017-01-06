@@ -1,4 +1,6 @@
 class TilesController < ApplicationController
+  before_action :find_tile, only: [:show, :edit, :update, :destroy]
+  
   def index
     @all_tiles = Tile.all
   end
@@ -18,8 +20,24 @@ class TilesController < ApplicationController
     end
   end
   
+  def show
+  end
+  
+  def edit
+  end
+  
+  def update
+  end
+  
+  def destroy
+  end
+  
   private
     def tile_params
       params.require(:tile).permit(:picture, :description)
+    end
+    
+    def find_tile
+      @tile = Tile.find(params[:id])
     end
 end
