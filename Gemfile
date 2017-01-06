@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Paperclip for image attachments
 gem "paperclip", "5.0.0"
 
+# Use simple_form for creating forms
+gem 'simple_form'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
