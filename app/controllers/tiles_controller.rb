@@ -27,6 +27,10 @@ class TilesController < ApplicationController
   end
   
   def update
+    if @tile.update(tile_params)
+      flash[:info] = "Your Tile was updated!"
+      redirect_to tile_path(@tile)
+    end
   end
   
   def destroy
