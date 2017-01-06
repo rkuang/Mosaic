@@ -41,6 +41,9 @@ gem "paperclip", "5.0.0"
 # Use simple_form for creating forms
 gem 'simple_form'
 
+# Use Bootstrap for CSS styles
+gem 'bootstrap-sass', '~> 3.3.6'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
