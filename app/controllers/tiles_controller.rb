@@ -1,16 +1,18 @@
 class TilesController < ApplicationController
   before_action :find_tile, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
+  before_action :owned_tile, only: [:edit, :update, :destroy]
   
   def index
     @all_tiles = Tile.all
   end
   
   def new
-    @tile = Tile.new
+    @tile = current_user.tiles.build
   end
   
   def create
-    @tile = Tile.new(tile_params)
+    @tile = current_user.tiles.build(tile_params)
     if @tile.save
       flash[:success] = "Your Tile was created!"
       redirect_to tiles_path
@@ -48,5 +50,12 @@ class TilesController < ApplicationController
     
     def find_tile
       @tile = Tile.find(params[:id])
+    end
+    
+    def owned_tile
+      if @tile.user != current_user
+        flash[:danger] = "This Tile doesn't belong to you."
+        redirect_to tile_path(@tile)
+      end
     end
 end

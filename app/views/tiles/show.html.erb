@@ -2,7 +2,12 @@
   <%= render 'show_tile' %>
 </div>
 
+
 <div class="footer text-center">
   <%= link_to 'Return', tiles_path %>
-  <%= link_to 'Edit', edit_tile_path %>
+  <% if @tile.user.id == current_user.id %>
+    <%= link_to 'Edit', edit_tile_path %>
+  <% end %>
 </div>
+
+  
