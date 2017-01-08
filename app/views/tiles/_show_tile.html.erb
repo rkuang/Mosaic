@@ -1,0 +1,13 @@
+<div class="tile">
+  <div class="tile-header">
+    Author
+  </div>
+  <div class="tile-picture">
+    <%= image_tag @tile.picture.url(:medium) %>
+  </div>
+  <div class="tile-footer">
+    <div class="tile-description">
+      <%= @tile.description %>
+    </div>
+  </div>
+</div>

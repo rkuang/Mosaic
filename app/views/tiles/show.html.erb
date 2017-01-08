@@ -1,20 +1,8 @@
 <div class="tile-wrapper">
-  <div class="tile">
-    <div class="tile-header">
-      Author
-    </div>
-    <div class="tile-picture">
-      <%= image_tag @tile.picture.url(:medium) %>
-    </div>
-    <div class="tile-footer">
-      <div class="tile-description">
-        <%= @tile.description %>
-      </div>
-    </div>
-  </div>
-  
-  <div class="footer text-center">
-    <%= link_to 'Return', tiles_path %>
-    <%= link_to 'Edit', edit_tile_path %>
-  </div>
+  <%= render 'show_tile' %>
+</div>
+
+<div class="footer text-center">
+  <%= link_to 'Return', tiles_path %>
+  <%= link_to 'Edit', edit_tile_path %>
 </div>

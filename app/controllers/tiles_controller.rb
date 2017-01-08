@@ -30,10 +30,15 @@ class TilesController < ApplicationController
     if @tile.update(tile_params)
       flash[:info] = "Your Tile was updated!"
       redirect_to tile_path(@tile)
+    else
+      flash.now[:danger] = @tile.errors.full_messages.join(", ")
+      render :edit
     end
   end
   
   def destroy
+    @tile.destroy
+    redirect_to tiles_path
   end
   
   private
