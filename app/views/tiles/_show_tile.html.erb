@@ -3,7 +3,12 @@
     <%= @tile.user.user_name %>
   </div>
   <div class="tile-picture">
-    <%= image_tag @tile.picture.url(:medium) %>
+    <% if tile.picture.file? %>
+      <%= link_to (image_tag tile.picture.url(:medium)), tile_path(tile) %>
+    <% else %>
+      Oops! Heroku doesn't allow saving images to their file system.
+      Please wait while the owner implements external file storage.
+    <% end %>
   </div>
   <div class="tile-footer">
     <div class="tile-description">
