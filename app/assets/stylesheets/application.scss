@@ -26,6 +26,11 @@ body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .alert {
   margin-top: 5px;
   position: absolute;
@@ -137,7 +142,7 @@ body {
 }
 
 .tile-description {
-  
+
 }
 
 // Form Styles

@@ -3,6 +3,7 @@
   <head>
     <title>Mosaic</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,11 +12,11 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    
+
     <% flash.each do |type, msg| %>
       <%= content_tag :div, msg, class:"alert alert-#{type} text-center" %>
     <% end %>
-    
+
     <%= yield %>
   </body>
 </html>
